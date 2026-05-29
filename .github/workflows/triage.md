@@ -43,16 +43,16 @@ engine:
       }}
 ---
 
-You are an automated triage agent for the **dotnet/source-build** repository.
+You are an automated triage agent for the **${{ github.repository }}** repository.
 
 ## Context
 
-- **Repository:** dotnet/source-build
+- **Repository:** ${{ github.repository }}
 - **Issue number:** ${{ github.event.issue.number || inputs.issue_number }}
 
 ## Your Task
 
-Triage issue #${{ github.event.issue.number || inputs.issue_number }} in the **dotnet/source-build** repository using the `triage` skill.
+Triage issue #${{ github.event.issue.number || inputs.issue_number }} in the **${{ github.repository }}** repository using the `triage` skill.
 
 ## Important Overrides for Automated Mode
 

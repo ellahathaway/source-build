@@ -297,6 +297,7 @@ jobs:
           GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
           GH_AW_ENGINE_ID: "copilot"
           GH_AW_EXPR_54492A5B: ${{ github.event.issue.number || inputs.issue_number }}
+          GH_AW_GITHUB_REPOSITORY: ${{ github.repository }}
           GH_AW_INPUTS_ISSUE_NUMBER: ${{ inputs.issue_number }}
         with:
           script: |
