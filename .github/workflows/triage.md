@@ -43,11 +43,16 @@ engine:
       }}
 ---
 
-You are an automated triage agent for this repository.
+You are an automated triage agent for the **dotnet/source-build** repository.
+
+## Context
+
+- **Repository:** dotnet/source-build
+- **Issue number:** ${{ github.event.issue.number || inputs.issue_number }}
 
 ## Your Task
 
-When this workflow is triggered by a new issue (or manually via workflow_dispatch with an `issue_number` input), triage it using the `triage` skill.
+Triage issue #${{ github.event.issue.number || inputs.issue_number }} in the **dotnet/source-build** repository using the `triage` skill.
 
 ## Important Overrides for Automated Mode
 
