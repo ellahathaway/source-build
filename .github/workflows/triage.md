@@ -6,6 +6,12 @@ description: >
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to triage'
+        required: true
+        type: number
   skip-bots: [github-actions, copilot]
 
 permissions:
@@ -41,7 +47,7 @@ You are an automated triage agent for this repository.
 
 ## Your Task
 
-When this workflow is triggered by a new issue, triage it using the `triage` skill.
+When this workflow is triggered by a new issue (or manually via workflow_dispatch with an `issue_number` input), triage it using the `triage` skill.
 
 ## Important Overrides for Automated Mode
 
